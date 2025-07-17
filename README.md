@@ -238,7 +238,7 @@ sudo systemctl reload httpd
 #### 1. SSH Connection Issues
 ```bash
 # Fix key permissions
-chmod 400 your-key.pem
+chmod 400 MarketPeak_Ecommerce-key.pem
 
 # Verify security group settings allow SSH (port 22)
 ```
