@@ -1,322 +1,214 @@
-# MarketPeak E-Commerce Platform Deployment
+# AWS Account Creation Guide
 
 ## Project Overview
 
-This project demonstrates the complete deployment workflow of an e-commerce platform called "MarketPeak" using Git for version control, Linux environment for development, and AWS EC2 for cloud deployment. The platform features product listings, shopping cart functionality, and user authentication.
+This project provides a comprehensive guide for creating an Amazon Web Services (AWS) account. The tutorial is designed to walk beginners through the entire process of setting up an AWS account, from initial registration to accessing the AWS Management Console.
 
-## Table of Contents
+**Project Duration:** 2 hours
 
-- [Prerequisites](#prerequisites)
-- [Project Structure](#project-structure)
-- [Step-by-Step Implementation](#step-by-step-implementation)
-- [Deployment Architecture](#deployment-architecture)
-- [Troubleshooting](#troubleshooting)
-- [Best Practices](#best-practices)
-- [Conclusion](#conclusion)
+## Learning Objectives
+
+By completing this guide, you will:
+
+- ✅ Understand the basics of AWS Cloud and its importance for businesses and individuals
+- ✅ Successfully create an AWS account and navigate through the setup process
+- ✅ Learn how to access the AWS Management Console using newly created account credentials
+- ✅ Gain practical experience in using AWS services effectively for future projects or business needs
 
 ## Prerequisites
 
-- AWS Account with EC2 access
-- GitHub account
-- Basic knowledge of Git, Linux commands, and web technologies
-- SSH client for connecting to EC2 instance
+- Valid email address
+- Phone number for verification
+- Credit/debit card for account verification (no charges unless you exceed AWS Free Tier limits)
 
-## Project Structure
+## Understanding Cloud Computing
 
-```
-MarketPeak_Ecommerce/
-├── README.md
-├── index.html
-├── css/
-├── js/
-├── images/
-└── fonts/
-```
+### What is Cloud?
 
-## Step-by-Step Implementation
+Cloud computing is like having a giant digital storage space that's not just one big hard drive, but a network of powerful computers connected over the internet. Instead of storing everything on your local device, you can:
 
-### 1. Version Control Setup with Git
+- Store files, photos, and apps remotely
+- Access your content from anywhere with an internet connection
+- Avoid worrying about running out of local storage space
+- Have a backup solution for your important data
 
-#### 1.1 Initialize Local Git Repository
+### What is AWS Cloud?
 
-```bash
-# Create project directory
-mkdir MarketPeak_Ecommerce
-cd MarketPeak_Ecommerce
+Amazon Web Services (AWS) is one of the leading cloud providers in the market, alongside Azure, Google Cloud Platform, and IBM Cloud. AWS offers:
 
-# Initialize Git repository
-git init
-```
+- **Comprehensive cloud computing services** including servers, storage, databases, and networking
+- **Scalable infrastructure** delivered over the internet
+- **Pay-as-you-go pricing model** - you only pay for what you use
+- **Global reach** with data centers worldwide
 
-#### 1.2 Obtain E-Commerce Website Template
+### Why AWS Cloud Matters
 
-1. **Template Selection**: Downloaded a suitable e-commerce template from Tooplate
-2. **Template Preparation**: Extracted the template files into the project directory
-3. **Customization**: Made minor adjustments to fit the "MarketPeak" branding
+AWS democratizes access to powerful computing resources by:
 
-#### 1.3 Stage and Commit Initial Code
+- Enabling small businesses and startups to access enterprise-level tools
+- Eliminating the need for large upfront investments in hardware
+- Providing flexible scaling options based on demand
+- Offering cost-effective solutions through the Pay As You Go model
 
-```bash
-# Configure Git user information
-git config --global user.name "olugbedu"
-git config --global user.email "adedejiolugbedu@gmail.com"
+## Step-by-Step Account Creation Process
 
-# Add files to staging area
-git add .
+### Step 1: Initial Account Setup
 
-# Initial commit
-git commit -m "Initial commit with basic e-commerce site structure"
-```
+1. **Navigate to AWS Account Creation**
+   - Open your web browser
+   - Go to the AWS account creation page
+   - Click on **"Create an AWS account"**
 
-#### 1.4 Push to GitHub Repository
+### Step 2: Email Verification
 
-```bash
-# Create remote repository connection
-git remote add origin https://github.com/olugbedu/MarketPeak_Ecommerce.git
+2. **Provide Account Details**
+   - Enter a valid email address
+   - Create a secure password
+   - Choose an AWS account name
+   - Click **"Verify email address"**
 
-# Push code to GitHub
-git push -u origin main
-```
+3. **Check Your Email**
+   - Open your email inbox
+   - Look for the verification email from AWS
+   - Copy the verification code provided
 
-### 2. AWS EC2 Deployment
+4. **Complete Email Verification**
+   - Return to the AWS registration page
+   - Paste the verification code
+   - Click **"Verify"**
 
-#### 2.1 EC2 Instance Setup
+### Step 3: Password Setup
 
-1. **Launch Instance**: Created Amazon Linux AMI EC2 instance
-2. **Security Group**: Configured to allow HTTP (port 80) and SSH (port 22) traffic
-3. **Key Pair**: Generated and downloaded key pair for SSH access
-4. **Connection**: Connected to instance via SSH
+5. **Set Root User Password**
+   - Your email address will be successfully registered
+   - Create a strong root user password
+   - Click **"Continue"**
 
-```bash
-ssh -i "MarketPeak_Ecommerce-key" ec2-user@18.118.109.77
-```
+### Step 4: Personal Information
 
-#### 2.2 Clone Repository on Linux Server
+6. **Enter Personal Details**
+   - Fill in all required personal information fields
+   - Ensure all information is accurate
+   - Click **"Continue"**
 
-**SSH Method Implementation:**
+### Step 5: Payment Information
 
-```bash
-# Generate SSH key pair
-ssh-keygen -t rsa -b 4096 -C "adedejiolugbedu@gmail.com"
+7. **Add Payment Method**
+   - Provide your payment information for verification purposes
+   - **Note:** You won't be charged unless you exceed AWS Free Tier limits
+   - Some credit/debit card companies may authorize a nominal charge (~$1.00) for validation, which is typically reversed shortly after
+   - Click **"Verify and continue"**
 
-# Display public key
-cat ~/.ssh/MarketPeak_Ecommerce-git.pub
+8. **Payment Processing**
+   - Your payment information will be securely processed
+   - Wait for the verification to complete
 
-# Clone repository using SSH
-git clone git@github.com:olugbedu/MarketPeak_Ecommerce.git
-```
+### Step 6: Phone Verification
 
-**Alternative HTTPS Method:**
+9. **Phone Number Verification**
+   - A One Time Password (OTP) will be sent to your registered phone number
+   - Ensure you have access to the provided phone number
+   - Enter the OTP when received
 
-```bash
-# Clone using HTTPS
-git clone https://github.com/olugbedu/MarketPeak_Ecommerce.git
-```
+10. **Choose Verification Method**
+    - Select either **Text message (SMS)** or **Voice call** for verification
+    - Complete the CAPTCHA if presented
+    - Click **"Send"** to proceed
 
-#### 2.3 Web Server Installation
+11. **Complete Phone Verification**
+    - The verification code will be sent to your phone
+    - Copy the received verification code
+    - Enter the code in the verification field
+    - Click **"Continue"**
 
-```bash
-# Update system packages
-sudo yum update -y
+### Step 7: Support Plan Selection
 
-# Install Apache HTTP Server
-sudo yum install httpd -y
+12. **Select Support Plan**
+    - Choose from the available support plans
+    - **Recommended:** Start with **Basic support - Free option**
+    - Review the details of each plan before making a selection
+    - Click **"Complete sign up"** to finalize the process
 
-# Start and enable Apache service
-sudo systemctl start httpd
-sudo systemctl enable httpd
+### Step 8: Account Activation
 
-# Verify service status
-sudo systemctl status httpd
-```
+13. **Account Successfully Created**
+    - Your Amazon Web Services account has been successfully created
+    - Click **"Go to the AWS Management Console"** to access your account
 
-#### 2.4 Configure Apache for Website
+### Step 9: Console Access
 
-```bash
-# Clear default Apache directory
-sudo rm -rf /var/www/html/*
+14. **Personalize Your Experience**
+    - Enter your preferences for personalizing your AWS experience
+    - Click **"Submit"**
 
-# Copy website files to Apache directory
-sudo cp -r ~/MarketPeak_Ecommerce/* /var/www/html/
+15. **Sign In to Console**
+    - Click **"Sign in to the Console"**
 
-# Set proper permissions
-sudo chown -R apache:apache /var/www/html/
-sudo chmod -R 755 /var/www/html/
+16. **Root User Login**
+    - Select **"Root user"**
+    - Enter your registered email address
+    - Click **"Next"**
+    - Complete CAPTCHA if presented
+    - Click **"Submit"**
 
-# Reload Apache service
-sudo systemctl reload httpd
-```
+17. **Final Login**
+    - Enter your root password
+    - Click **"Sign In"**
 
-#### 2.5 Access and Verify Deployment
+## 🎉 Congratulations!
 
-- Accessed website using EC2 public IP
-- Verified all pages load correctly
-- Tested responsive design and functionality
+You have successfully logged in to your Amazon Web Services account and can now access the AWS Management Console.
 
-### 3. Continuous Integration and Deployment Workflow
+## Important Notes
 
-#### 3.1 Development Branch Workflow
+### AWS Free Tier
+- AWS offers a Free Tier that includes various services with usage limits
+- You won't be charged unless you exceed these limits
+- Monitor your usage to stay within Free Tier bounds
 
-```bash
-# Create and switch to development branch
-git branch development
-git checkout development
+### Security Best Practices
+- Keep your root user credentials secure
+- Consider setting up Multi-Factor Authentication (MFA)
+- Create IAM users for day-to-day activities instead of using root user
+- Regularly review your account activity
 
-# Make changes and improvements
-# ... (edit files) ...
+### Cost Management
+- Set up billing alerts to monitor usage
+- Use AWS Cost Calculator to estimate costs
+- Take advantage of AWS Free Tier services
+- Implement the Pay As You Go model effectively
 
-# Stage changes
-git add .
+## Project Reflection
 
-# Commit changes
-git commit -m "Add new features or fix bugs"
+### Key Takeaways
 
-# Push development branch
-git push origin development
-```
+1. **Understanding AWS Cloud:** AWS provides a virtual space for storing digital content and creating applications without worrying about infrastructure limitations.
 
-#### 3.2 Pull Request and Merging Process
+2. **Importance of AWS Cloud:** AWS democratizes access to powerful computing tools, making enterprise-level resources available to small businesses and startups through flexible, cost-effective pricing.
 
-1. **Create Pull Request**: Created PR on GitHub from development to main branch
-2. **Code Review**: Reviewed changes for quality and functionality
-3. **Merge Process**:
+3. **Account Setup Process:** The step-by-step process ensures all necessary details are provided accurately, with proper verification at each stage.
 
-```bash
-# Switch to main branch
-git checkout main
+4. **Console Access:** Successfully accessing the AWS Management Console opens the door to utilizing hundreds of AWS services and resources.
 
-# Merge development branch
-git merge development
+## Next Steps
 
-# Push merged changes
-git push origin main
-```
+After completing your AWS account setup, consider:
 
-#### 3.3 Production Deployment
+- Exploring the AWS Free Tier services
+- Taking AWS training courses
+- Setting up your first EC2 instance
+- Configuring billing alerts
+- Learning about AWS Identity and Access Management (IAM)
 
-```bash
-# SSH into production server
-ssh -i "MarketPeak_Ecommerce-key" ec2-user@18.118.109.77
+## Support and Resources
 
-# Navigate to website directory
-cd /var/www/html/
-
-# Pull latest changes
-git pull origin main
-
-# Restart web server if needed
-sudo systemctl reload httpd
-```
-
-#### 3.4 Testing and Validation
-
-- Verified new features work in production environment
-- Tested website responsiveness and functionality
-- Confirmed all links and forms work correctly
-
-## Deployment Architecture
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Developer     │    │     GitHub      │    │   AWS EC2       │
-│   Local Env     │───▶│   Repository    │───▶│   Production    │
-│                 │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-        │                        │                        │
-        │                        │                        │
-        ▼                        ▼                        ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Git Version   │    │   Code Storage  │    │   Apache Web    │
-│   Control       │    │   & Backup      │    │   Server        │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
-
-## Troubleshooting
-
-### Common Issues and Solutions
-
-#### 1. SSH Connection Issues
-```bash
-# Fix key permissions
-chmod 400 MarketPeak_Ecommerce-key.pem
-
-# Verify security group settings allow SSH (port 22)
-```
-
-#### 2. Apache Service Issues
-```bash
-# Check Apache status
-sudo systemctl status httpd
-
-# View error logs
-sudo tail -f /var/log/httpd/error_log
-```
-
-#### 3. File Permission Problems
-```bash
-# Fix ownership and permissions
-sudo chown -R apache:apache /var/www/html/
-sudo chmod -R 755 /var/www/html/
-```
-
-#### 4. Git Authentication Issues
-```bash
-# For HTTPS, use personal access token
-# For SSH, ensure key is added to GitHub account
-ssh -T git@github.com
-```
-
-## Best Practices Implemented
-
-### 1. Version Control
-- Used descriptive commit messages
-- Implemented branch-based development workflow
-- Regular commits with logical changes
-
-### 2. Security
-- Configured proper security groups
-- Used SSH keys for secure authentication
-- Set appropriate file permissions
-
-### 3. Deployment
-- Automated deployment process
-- Implemented CI/CD workflow
-- Regular testing and validation
-
-### 4. Documentation
-- Comprehensive README documentation
-- Clear step-by-step instructions
-- Troubleshooting guides
-
-## Key Learnings
-
-1. **Git Workflow**: Mastered branch management and collaborative development
-2. **Linux Administration**: Gained experience with system administration tasks
-3. **Cloud Deployment**: Understood AWS EC2 deployment and configuration
-4. **Web Server Management**: Learned Apache configuration and management
-5. **CI/CD Implementation**: Implemented automated deployment workflow
-
-## Future Enhancements
-
-- Implement HTTPS with SSL certificates
-- Add database integration for dynamic content
-- Set up monitoring and logging
-- Implement automated testing
-- Add load balancing for scalability
-
-## Conclusion
-
-This project successfully demonstrated the complete deployment lifecycle of an e-commerce platform using modern DevOps practices. The implementation covers:
-
-- ✅ Version control with Git and GitHub
-- ✅ Linux server administration
-- ✅ AWS EC2 cloud deployment
-- ✅ Apache web server configuration
-- ✅ Continuous integration and deployment workflow
-- ✅ Production environment management
-
-The MarketPeak e-commerce platform is now successfully deployed and accessible via the AWS EC2 public IP address, with a robust workflow for future updates and maintenance.
+- **AWS Documentation:** [https://docs.aws.amazon.com/](https://docs.aws.amazon.com/)
+- **AWS Free Tier:** [https://aws.amazon.com/free/](https://aws.amazon.com/free/)
+- **AWS Support:** Access through your AWS Management Console
+- **AWS Training:** [https://aws.amazon.com/training/](https://aws.amazon.com/training/)
 
 ---
 
-**Project Repository**: [MarketPeak_Ecommerce](https://github.com/olugbedu/MarketPeak_Ecommerce)
+**Project Duration:** 2 hours  
+**Difficulty Level:** Beginner  
+**Last Updated:** July 2025
