@@ -45,7 +45,7 @@ Amazon S3 (Simple Storage Service) is a scalable cloud storage solution designed
     - Blocked public access: Enabled
   - Clicked **Create**
 
-📸 *[Screenshot Placeholder: Bucket Created]*
+![](assets/add-contact-info-branch.png)
 
 ---
 
@@ -55,7 +55,7 @@ Amazon S3 (Simple Storage Service) is a scalable cloud storage solution designed
   - Selected a text file: `welcome.txt`
   - Clicked **Upload**
 
-📸 *[Screenshot Placeholder: File Uploaded]*
+![](assets/aws-home.png)
 
 ---
 
@@ -65,7 +65,7 @@ Amazon S3 (Simple Storage Service) is a scalable cloud storage solution designed
   - Scrolled to **Bucket Versioning**
   - Enabled and saved changes
 
-📸 *[Screenshot Placeholder: Versioning Enabled]*
+![](assets/aws-home2.png)
 
 ---
 
@@ -86,7 +86,7 @@ Amazon S3 (Simple Storage Service) is a scalable cloud storage solution designed
 }
 ```
 
-📸 *[Screenshot Placeholder: Bucket Policy Set]*
+![](assets/aws-landing.png)
 
 ---
 
@@ -98,7 +98,7 @@ Amazon S3 (Simple Storage Service) is a scalable cloud storage solution designed
     - Rule Scope: All objects
     - Transition to Glacier: After 30 days
 
-📸 *[Screenshot Placeholder: Lifecycle Rule Configured]*
+![](assets/contact-info-html-info.png)
 
 ---
 
@@ -123,7 +123,7 @@ aws s3api head-bucket --bucket "my-first-s3-bucket-090" \
 
 ---
 
-## 🔍 Summary of Outcomes
+##  Summary of Outcomes
 
 | Outcome                          | Achieved |
 |----------------------------------|----------|
